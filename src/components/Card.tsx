@@ -29,19 +29,15 @@ export default function Card({
   colorCount,
 }: CardProps) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-lg bg-light-100 transition-shadow hover:shadow-md">
+    <article className="group flex flex-col overflow-hidden rounded-lg bg-light-100 transition-shadow hover:shadow-md border-1 border-light-300">
       {/* Image area */}
       <div className="relative aspect-square w-full bg-light-200">
-        {badge && (
-          <span className={`absolute top-3 left-3 z-10 rounded px-2 py-1 text-footnote text-light-100 ${badge.tone === "orange" ? "bg-orange" : badge.tone === "red" ? "bg-red" : "bg-green"}`}>
-            {badge.label}
-          </span>
-        )}
+
         <Image
           src={image}
           alt={title}
           fill
-          className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
