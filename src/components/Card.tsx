@@ -4,17 +4,19 @@ interface CardProps {
   /** Product or shoe name */
   title: string;
   /** Short description or subtitle */
-  description: string;
+  description?: string;
   /** Path to the product image (relative to /public or external URL) */
   image: string;
   /** Price displayed as a formatted string, e.g. "$120.00" */
-  price: string;
+  price: number;
   /** Optional badge label such as "Best Seller" or "New Arrival" */
-  badge?: string;
+  badge?: { label: string; tone: "orange" | "red" | "green" };
   /** Product category, e.g. "Men's Shoes" */
   category?: string;
   /** Number of available color variants */
   colorCount?: number;
+  subtitle?: string;
+  meta?: string;
 }
 
 export default function Card({
@@ -31,8 +33,8 @@ export default function Card({
       {/* Image area */}
       <div className="relative aspect-square w-full bg-light-200">
         {badge && (
-          <span className="absolute top-3 left-3 z-10 rounded bg-red px-2 py-1 text-footnote text-light-100">
-            {badge}
+          <span className={`absolute top-3 left-3 z-10 rounded px-2 py-1 text-footnote text-light-100 ${badge.tone === "orange" ? "bg-orange" : badge.tone === "red" ? "bg-red" : "bg-green"}`}>
+            {badge.label}
           </span>
         )}
         <Image
