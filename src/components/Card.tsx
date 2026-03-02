@@ -8,13 +8,11 @@ interface CardProps {
   /** Price displayed as a formatted string, e.g. "$149.99" */
   price: string;
   /** Optional badge label such as "Best Seller" or "New Arrival" */
-  badge?: { label: string; tone: "orange" | "red" | "green" };
+  badge?: string;
   /** Product category, e.g. "Men's Shoes" */
   category?: string;
   /** Number of available color variants */
   colorCount?: number;
-  subtitle?: string;
-  meta?: string;
 }
 
 export default function Card({
