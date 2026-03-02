@@ -24,7 +24,7 @@ export default function Card({
   colorCount,
 }: CardProps) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-lg bg-light-100 transition-shadow hover:shadow-md cursor-pointer">
+    <article className="group flex flex-col overflow-hidden rounded-lg bg-light-100 transition-shadow hover:shadow-md cursor-pointer border-1 border-light-300">
       {/* Image area */}
       <div className="relative aspect-square w-full bg-light-200 overflow-hidden">
         {badge && (
