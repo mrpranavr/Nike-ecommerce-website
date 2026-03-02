@@ -12,7 +12,6 @@ const Home = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card
             title="Nike Air Force 1 Mid '07"
-            description="Men's Shoes"
             image="/shoes/shoe-1.jpg"
             price="$130.00"
             badge="Best Seller"
@@ -21,7 +20,6 @@ const Home = () => {
           />
           <Card
             title="Nike Air Max 90"
-            description="Women's Shoes"
             image="/shoes/shoe-5.avif"
             price="$120.00"
             category="Women's Shoes"
@@ -29,7 +27,6 @@ const Home = () => {
           />
           <Card
             title="Nike Huarache Run"
-            description="Kids' Shoes"
             image="/shoes/shoe-8.avif"
             price="$90.00"
             badge="New Arrival"
